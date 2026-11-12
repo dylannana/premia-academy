@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nos horaires | PREMIA ACADEMY</title>
+    <meta name="description" content="Consultez les horaires des cours de répétition de PREMIA ACADEMY à Makepe, Douala. Retrouvez nos jours et heures de cours pour les classes de la 3ème à la Terminale.">
+    <link rel="icon" type="image/png" href="assets/img/logo/logo-complet.png">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f7f5;
+            color: #14213d;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background: #101b35;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: #d4af61;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(
+                120deg,
+                #101b35,
+                #1d3156
+            );
+
+            padding: 90px 8%;
+            text-align: center;
+            color: white;
+        }
+
+        .hero span {
+            color: #d4af61;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin: 22px 0;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #e0e5ee;
+            font-size: 17px;
+        }
+
+        .gold-line {
+            width: 75px;
+            height: 4px;
+            background: #d4af61;
+            margin: 25px auto;
+            border-radius: 10px;
+        }
+
+        /* HORAIRES */
+
+        .schedule {
+            padding: 85px 8%;
+            text-align: center;
+        }
+
+        .section-label {
+            color: #b18a3c;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .schedule h2 {
+            font-size: 34px;
+            margin: 15px 0;
+            color: #101b35;
+        }
+
+        .section-description {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #687386;
+            line-height: 1.8;
+        }
+
+        .schedule-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 55px;
+        }
+
+        .schedule-card {
+            background: white;
+            border-radius: 18px;
+            padding: 38px 25px;
+            border: 1px solid #eee9df;
+            box-shadow: 0 12px 35px rgba(16, 27, 53, 0.07);
+            transition: 0.3s;
+        }
+
+        .schedule-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(16, 27, 53, 0.13);
+        }
+
+        .day-number {
+            width: 55px;
+            height: 55px;
+            background: #101b35;
+            color: #d4af61;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .schedule-card h3 {
+            margin: 23px 0 15px;
+            font-size: 25px;
+            color: #101b35;
+        }
+
+        .time {
+            font-size: 23px;
+            color: #b18a3c;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .schedule-card p {
+            color: #687386;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .schedule-tag {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 9px 16px;
+            background: #f8f3e8;
+            color: #94702e;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* AVANTAGES */
+
+        .advantages {
+            background: #101b35;
+            padding: 75px 8%;
+            color: white;
+            text-align: center;
+        }
+
+        .advantages h2 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .advantages-intro {
+            color: #c6cedb;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .advantages-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 45px;
+        }
+
+        .advantage {
+            padding: 25px;
+            border: 1px solid rgba(212,175,97,0.3);
+            border-radius: 14px;
+        }
+
+        .advantage h3 {
+            color: #d4af61;
+            margin-bottom: 15px;
+        }
+
+        .advantage p {
+            color: #d2d8e2;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* INSCRIPTION */
+
+        .inscription {
+            padding: 80px 20px;
+            text-align: center;
+            background: #f7f7f5;
+        }
+
+        .inscription h2 {
+            font-size: 32px;
+            color: #101b35;
+            margin-bottom: 18px;
+        }
+
+        .inscription p {
+            color: #687386;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #b18a3c;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #101b35;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #101b35;
+            padding: 30px 15px;
+            text-align: center;
+            color: #c6cedb;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        footer strong {
+            color: #d4af61;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+
+            .schedule-container,
+            .advantages-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .schedule h2,
+            .advantages h2 {
+                font-size: 27px;
+            }
+
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">PREMIA ACADEMY</div>
+
+        <a href="index.html">← Retour à l'accueil</a>
+
+    </header>
+
+
+    <section class="hero">
+
+        <span>Excellence • Discipline • Réussite</span>
+
+        <h1>Nos horaires de cours</h1>
+
+        <div class="gold-line"></div>
+
+        <p>
+            Parce que chaque réussite commence par une bonne organisation,
+            PREMIA ACADEMY propose des créneaux de formation adaptés
+            pour accompagner les apprenants vers l'excellence académique.
+        </p>
+
+    </section>
+
+
+    <section class="schedule">
+
+        <span class="section-label">Votre réussite, notre engagement</span>
+
+        <h2>Planifiez votre apprentissage</h2>
+
+        <p class="section-description">
+            Retrouvez nos différents jours de formation et choisissez
+            les créneaux qui correspondent à votre organisation.
+        </p>
+
+
+        <div class="schedule-container">
+
+
+        <!-- LUNDI -->
+    <div class="schedule-card">
+        <div class="day-number">01</div>
+        <h3>Lundi</h3>
+        <div class="time">16h15 – 18h15</div>
+        <p>
+            Une séance dédiée au renforcement des acquis
+            et à la préparation des prochaines évaluations.
+        </p>
+        <span class="schedule-tag">Séance de renforcement</span>
+    </div>
+
+    <!-- MERCREDI -->
+    <div class="schedule-card">
+        <div class="day-number">02</div>
+        <h3>Mercredi</h3>
+        <div class="time">15h00 – 18h00</div>
+        <p>
+            Un rendez-vous pédagogique pour consolider
+            les connaissances et approfondir les notions étudiées.
+        </p>
+        <span class="schedule-tag">Milieu de semaine</span>
+    </div>
+
+    <!-- SAMEDI MATIN -->
+    <div class="schedule-card">
+        <div class="day-number">03</div>
+        <h3>Samedi matin</h3>
+        <div class="time">08h30 – 13h00</div>
+        <p>
+            Un créneau de travail approfondi consacré
+            aux exercices et à la maîtrise des enseignements.
+        </p>
+        <span class="schedule-tag">Session matinale</span>
+    </div>
+
+    <!-- SAMEDI APRES-MIDI -->
+    <div class="schedule-card">
+        <div class="day-number">04</div>
+        <h3>Samedi après-midi</h3>
+        <div class="time">14h00 – 18h00</div>
+        <p>
+            Un accompagnement pédagogique pour renforcer
+            les compétences et développer les méthodes de travail.
+        </p>
+        <span class="schedule-tag">Session après-midi</span>
+    </div>
+
+    <!-- DIMANCHE -->
+    <div class="schedule-card">http://127.0.0.1:5500/index.html
+        <div class="day-number">05</div>
+        <h3>Dimanche</h3>
+        <div class="time">13h00 – 16h00</div>
+        <p>
+            Un moment de révision et de consolidation
+            pour préparer efficacement les échéances scolaires.
+        </p>
+        <span class="schedule-tag">Séance de consolidation</span>
+    </div>
+
+</div>
+    </section>
+
+
+    <section class="advantages">
+
+        <span class="section-label">Notre engagement pédagogique</span>
+
+        <h2>Bien plus que des cours de répétition</h2>
+
+        <p class="advantages-intro">
+            À PREMIA ACADEMY, nous accordons une importance particulière
+            à la qualité de l'accompagnement et à la progression de chaque apprenant.
+        </p>
+
+
+        <div class="advantages-container">
+
+            <div class="advantage">
+
+                <h3>Suivi pédagogique</h3>
+
+                <p>
+                    Un accompagnement qui favorise la compréhension
+                    et la progression scolaire.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <h3>Méthodologie</h3>
+
+                <p>
+                    Des explications structurées, des exercices
+                    et des corrections pour renforcer les acquis.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <h3>Esprit d'excellence</h3>
+
+                <p>
+                    Une culture du travail, de la discipline
+                    et de la recherche permanente de la réussite.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="inscription">
+
+        <h2>Préparons ensemble leur réussite !</h2>
+
+        <p>
+            Vous souhaitez inscrire votre enfant à PREMIA ACADEMY ?
+            Notre équipe est disponible pour vous orienter.
+        </p>
+
+        <a
+            href="https://wa.me/237683857126"
+            class="btn"
+            target="_blank">
+            Contacter PREMIA ACADEMY
+        </a>
+
+    </section>
+
+
+    <footer>
+
+        <strong>PREMIA ACADEMY</strong>
+
+        <p>La préparation qui fait la différence.</p>
+
+        <p>Makepe – École primaire L'Aubaine</p>
+
+        <p>© 2026 PREMIA ACADEMY. Tous droits réservés.</p>
+
+    </footer>
+
+
+</body>
+
+</html>

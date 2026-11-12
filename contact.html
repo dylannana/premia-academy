@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | PREMIA ACADEMY, Makepe BM Douala</title>
+  <meta name="description" content="Contactez PREMIA ACADEMY à Makepe, Douala, pour vos inscriptions et renseignements sur nos cours de répétition. Retrouvez notre adresse et contactez-nous sur WhatsApp.">
+  <meta name="theme-color" content="#00173D">
+  <link rel="icon" type="image/png" href="assets/img/logo/logo-complet.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | PREMIA ACADEMY">
+  <meta property="og:description" content="WhatsApp, téléphone, adresse et formulaire de contact.">
+  <meta property="og:image" content="assets/img/logo/logo-complet.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/contact.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="PREMIA ACADEMY, accueil">
+        <span class="brand-mono" aria-hidden="true">P</span>
+        <span class="brand-text">
+          <span class="brand-name">PREMIA</span>
+          <span class="brand-sub">ACADEMY</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-gold btn-sm" href="preinscription.html">Préinscrire</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Ouvrir le menu">
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+    <nav class="main-nav" id="menu-principal" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="formations.html">Nos formations</a></li>
+        <li><a href="equipe.html">Notre équipe</a></li>
+        <li><a href="horaires.html">Nos horaires</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contactez-nous</h1>
+        <p>Une question sur une classe, les horaires ou l'inscription ? Nous vous répondons avec plaisir.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+
+        <div class="contact-infos">
+          <div class="card">
+            <h3>WhatsApp</h3>
+            <p>683 857 126</p>
+            <a class="btn btn-gold" href="https://wa.me/237683857126">Écrire sur WhatsApp</a>
+          </div>
+          <div class="card">
+            <h3>Téléphone</h3>
+            <p>659 128 601</p>
+            <a class="btn btn-outline" href="tel:+237659128601">Appeler le centre</a>
+          </div>
+          <div class="card">
+            <h3>Adresse</h3>
+            <address>Makepe BM, École primaire L'Aubaine<br>Douala, Cameroun</address>
+            <a class="btn btn-outline"
+               href="https://www.google.com/maps/search/?api=1&query=Ecole+primaire+L%27Aubaine+Makepe+BM+Douala"
+               target="_blank" rel="noopener noreferrer">Ouvrir dans Google Maps</a>
+          </div>
+        </div>
+
+        <div class="contact-form-bloc">
+          <h2>Envoyez-nous un message</h2>
+          <form id="form-contact" class="form" novalidate>
+
+            <div class="champ">
+              <label for="nom">Votre nom</label>
+              <input type="text" id="nom" name="nom" autocomplete="name" aria-describedby="err-nom">
+              <p class="erreur" id="err-nom" aria-live="polite"></p>
+            </div>
+
+            <div class="champ">
+              <label for="telephone">Votre téléphone</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="ex. 677 123 456"
+                     inputmode="tel" autocomplete="tel" aria-describedby="err-telephone">
+              <p class="erreur" id="err-telephone" aria-live="polite"></p>
+            </div>
+
+            <div class="champ">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" aria-describedby="err-message"></textarea>
+              <p class="erreur" id="err-message" aria-live="polite"></p>
+            </div>
+
+            <div class="champ">
+              <label class="consentement" for="consentement">
+                <input type="checkbox" id="consentement" name="consentement" aria-describedby="err-consentement">
+                <span>J'accepte que PREMIA ACADEMY utilise ces informations pour répondre à ma demande.</span>
+              </label>
+              <p class="erreur" id="err-consentement" aria-live="polite"></p>
+            </div>
+
+            <button class="btn btn-gold" type="submit">Envoyer mon message</button>
+            <p class="note-form">WhatsApp s'ouvrira avec votre message prêt : il suffit d'appuyer sur « envoyer ».</p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h3>Contact</h3>
+      <a href="https://wa.me/237683857126">WhatsApp : 683 857 126</a>
+      <a href="tel:+237659128601">Téléphone : 659 128 601</a>
+      <h3>Liens rapides</h3>
+      <a href="a-propos.html">À propos</a>
+      <a href="formations.html">Nos formations</a>
+      <a href="horaires.html">Nos horaires</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <p class="copyright">© 2026 PREMIA ACADEMY. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/237683857126" aria-label="Écrire sur WhatsApp">WA</a>
+</body>
+</html>

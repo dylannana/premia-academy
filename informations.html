@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Espace Parents | PREMIA ACADEMY</title>
+    <meta name="description" content="Espace Parents de PREMIA ACADEMY à Makepe, Douala : découvrez nos programmes scolaires, nos classes et notre approche pédagogique pour accompagner les élèves vers la réussite.">
+    <link rel="icon" type="image/png" href="assets/img/logo/logo-complet.png">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f8f6;
+            color: #14213d;
+        }
+
+        header {
+            background: #101b35;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #d4af61;
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #101b35, #263d63);
+            padding: 85px 8%;
+            text-align: center;
+            color: white;
+        }
+
+        .hero span {
+            color: #d4af61;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin: 22px 0;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            color: #dce3ed;
+        }
+
+        .section {
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        .label {
+            color: #b18a3c;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin: 15px 0;
+        }
+
+        .description {
+            max-width: 700px;
+            margin: auto;
+            color: #687386;
+            line-height: 1.8;
+        }
+
+        .classes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            margin-top: 45px;
+        }
+
+        .class-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 14px;
+            border: 1px solid #eee9df;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .class-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .class-card h3 {
+            color: #b18a3c;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .class-card p {
+            color: #687386;
+            line-height: 1.8;
+        }
+
+        .pedagogie {
+            background: #101b35;
+            color: white;
+        }
+
+        .pedagogie h2 {
+            color: white;
+        }
+
+        .pedagogie .description {
+            color: #cbd3df;
+        }
+
+        .pedagogie-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 45px;
+        }
+
+        .pedagogie-card {
+            padding: 30px;
+            border: 1px solid rgba(212,175,97,0.35);
+            border-radius: 14px;
+        }
+
+        .pedagogie-card h3 {
+            color: #d4af61;
+            margin-bottom: 15px;
+        }
+
+        .pedagogie-card p {
+            color: #dce3ed;
+            line-height: 1.8;
+        }
+
+        .inscription {
+            padding: 85px 8%;
+            text-align: center;
+        }
+
+        .inscription h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .inscription p {
+            color: #687386;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 16px 30px;
+            background: #b18a3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #101b35;
+        }
+
+        footer {
+            background: #101b35;
+            padding: 30px;
+            text-align: center;
+            color: #cbd3df;
+            line-height: 2;
+        }
+
+        footer strong {
+            color: #d4af61;
+        }
+
+        @media(max-width: 850px) {
+
+            .classes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pedagogie-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+        }
+
+        @media(max-width: 500px) {
+
+            .classes {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+        }
+        /* PROGRAMMES PEDAGOGIQUES */
+
+.programmes {
+    background: #f3f4f6;
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.programmes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.programme-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    text-align: left;
+    border: 1px solid #eee9df;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.programme-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(16,27,53,0.12);
+}
+
+.programme-card h3 {
+    color: #101b35;
+    font-size: 23px;
+    border-bottom: 2px solid #d4af61;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.programme-card ul {
+    list-style: none;
+}
+
+.programme-card li {
+    padding: 11px 0;
+    border-bottom: 1px solid #eee;
+    color: #566174;
+    font-size: 15px;
+}
+
+.programme-card li::before {
+    content: "◆";
+    color: #b18a3c;
+    margin-right: 10px;
+    font-size: 10px;
+}
+
+.programme-type {
+    display: inline-block;
+    background: #f8f3e8;
+    color: #94702e;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">PREMIA ACADEMY</div>
+
+        <a href="index.html">← Retour à l'accueil</a>
+
+    </header>
+
+
+    <section class="hero">
+
+        <span>UN PARTENARIAT POUR LA RÉUSSITE</span>
+
+        <h1>Espace Parents</h1>
+
+        <p>
+            Bienvenue dans l'espace dédié aux parents.
+            Découvrez notre organisation pédagogique,
+            nos classes et notre engagement pour la réussite
+            scolaire de chaque apprenant.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <span class="label">Notre offre de formation</span>
+
+        <h2>Les classes accueillies</h2>
+
+        <p class="description">
+            PREMIA ACADEMY accompagne les apprenants
+            du premier cycle jusqu'aux classes de terminale
+            à travers différentes séries.
+        </p>
+
+
+        <div class="classes">
+
+            <div class="class-card">
+                <h3>3e</h3>
+                <p>
+                    Classe de troisième.
+                    Préparation aux examens
+                    et consolidation des acquis.
+                </p>
+            </div>
+
+            <div class="class-card">
+                <h3>Seconde</h3>
+                <p>
+                    Séries A4 et C.
+                    Renforcement des connaissances
+                    et préparation au cycle supérieur.
+                </p>
+            </div>
+
+            <div class="class-card">
+                <h3>Première</h3>
+                <p>
+                    Séries A4, C et D.
+                    Approfondissement des enseignements
+                    et préparation aux examens.
+                </p>
+            </div>
+
+            <div class="class-card">
+                <h3>Terminale</h3>
+                <p>
+                    Séries A4, C et D.
+                    Préparation intensive
+                    aux examens de fin d'études.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- PROGRAMMES PEDAGOGIQUES -->
+
+<section class="programmes">
+
+    <span class="label">Notre offre académique</span>
+
+    <h2>Nos programmes pédagogiques</h2>
+
+    <p class="description">
+        Découvrez les différentes matières enseignées
+        au sein de PREMIA ACADEMY selon les classes
+        et les séries.
+    </p>
+
+    <div class="programmes-grid">
+
+        <!-- TROISIEME -->
+
+        <div class="programme-card">
+
+            <span class="programme-type">PREMIER CYCLE</span>
+
+            <h3>3ème</h3>
+
+            <ul>
+                <li>Mathématiques</li>
+                <li>PCT</li>
+                <li>Français</li>
+                <li>Anglais</li>
+                <li>Langues étrangères</li>
+            </ul>
+
+        </div>
+
+
+        <!-- SECONDE A4 -->
+
+        <div class="programme-card">
+
+            <span class="programme-type">SÉRIE LITTÉRAIRE</span>
+
+            <h3>Seconde A4</h3>
+
+            <ul>
+                <li>Français</li>
+                <li>Anglais</li>
+                <li>Langues étrangères</li>
+                <li>Mathématiques</li>
+            </ul>
+
+        </div>
+
+
+        <!-- PREMIERE A4 -->
+
+        <div class="programme-card">
+
+            <span class="programme-type">SÉRIE LITTÉRAIRE</span>
+
+            <h3>Première A4</h3>
+
+            <ul>
+                <li>Français</li>
+                <li>Anglais</li>
+                <li>Langues étrangères</li>
+                <li>Mathématiques</li>
+            </ul>
+
+        </div>
+
+
+        <!-- SECONDE C -->
+
+        <div class="programme-card">
+
+            <span class="programme-type">SÉRIE SCIENTIFIQUE</span>
+
+            <h3>Seconde C</h3>
+
+            <ul>
+                <li>Mathématiques</li>
+                <li>Physique</li>
+                <li>Chimie</li>
+            </ul>
+
+        </div>
+
+
+        <!-- PREMIERE C ET D -->
+
+        <div class="programme-card">
+
+            <span class="programme-type">SÉRIES SCIENTIFIQUES</span>
+
+            <h3>Première C et D</h3>
+
+            <ul>
+                <li>Mathématiques</li>
+                <li>Physique</li>
+                <li>Chimie</li>
+                <li>SVTEEHB</li>
+                <li>Informatique</li>
+            </ul>
+
+        </div>
+
+
+        <!-- TERMINALE A4 -->
+
+        <div class="programme-card">
+
+            <span class="programme-type">SÉRIE LITTÉRAIRE</span>
+
+            <h3>Terminale A4</h3>
+
+            <ul>
+                <li>Français</li>
+                <li>Anglais</li>
+                <li>Langues étrangères</li>
+                <li>Mathématiques</li>
+            </ul>
+
+        </div>
+
+
+        <!-- TERMINALE C ET D -->
+
+        <div class="programme-card">
+
+            <span class="programme-type">SÉRIES SCIENTIFIQUES</span>
+
+            <h3>Terminale C et D</h3>
+
+            <ul>
+                <li>Mathématiques</li>
+                <li>Physique</li>
+                <li>Chimie</li>
+                <li>SVTEEHB</li>
+                <li>Informatique</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+    <section class="section pedagogie">
+
+        <span class="label">Notre vision éducative</span>
+
+        <h2>Un accompagnement tourné vers l'excellence</h2>
+
+        <p class="description">
+            Notre ambition est de contribuer à la formation
+            d'apprenants autonomes, disciplinés et performants.
+        </p>
+
+
+        <div class="pedagogie-grid">
+
+            <div class="pedagogie-card">
+
+                <h3>Comprendre</h3>
+
+                <p>
+                    Favoriser une meilleure assimilation
+                    des notions enseignées grâce à des
+                    explications structurées.
+                </p>
+
+            </div>
+
+
+            <div class="pedagogie-card">
+
+                <h3>Pratiquer</h3>
+
+                <p>
+                    Mettre les connaissances en application
+                    à travers des exercices, des travaux
+                    dirigés et des corrections.
+                </p>
+
+            </div>
+
+
+            <div class="pedagogie-card">
+
+                <h3>Réussir</h3>
+
+                <p>
+                    Développer la rigueur, la confiance
+                    et les méthodes nécessaires à la
+                    réussite scolaire.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="inscription">
+
+        <span class="label">Rejoignez-nous</span>
+
+        <h2>Offrez à votre enfant un cadre favorable à sa réussite.</h2>
+
+        <p>
+            Vous souhaitez intégrer PREMIA ACADEMY ?
+            Notre formulaire de préinscription est disponible
+            pour vous permettre de soumettre votre demande.
+        </p>
+
+        <a href="preinscription.html" class="btn">
+            Accéder à la préinscription
+        </a>
+
+    </section>
+
+
+    <footer>
+
+        <strong>PREMIA ACADEMY</strong>
+
+        <p>La préparation qui fait la différence.</p>
+
+        <p>Makepe – École primaire L'Aubaine</p>
+
+        <p>© 2026 PREMIA ACADEMY. Tous droits réservés.</p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Préinscription | PREMIA ACADEMY, Makepe BM Douala</title>
+  <meta name="description" content="Préinscrivez votre enfant à PREMIA ACADEMY (Makepe BM, Douala) en 2 minutes : 3ème, Seconde, Première et Terminale.">
+  <meta name="theme-color" content="#00173D">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Préinscription | PREMIA ACADEMY">
+  <meta property="og:description" content="Préinscrivez votre enfant en 2 minutes.">
+  <meta property="og:image" content="assets/img/logo/logo-complet.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/preinscription.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="PREMIA ACADEMY, accueil">
+        <span class="brand-mono" aria-hidden="true">P</span>
+        <span class="brand-text">
+          <span class="brand-name">PREMIA</span>
+          <span class="brand-sub">ACADEMY</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-gold btn-sm" href="preinscription.html">Préinscrire</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Ouvrir le menu">
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+    <nav class="main-nav" id="menu-principal" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="formations.html">Nos formations</a></li>
+        <li><a href="equipe.html">Notre équipe</a></li>
+        <li><a href="horaires.html">Nos horaires</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Préinscription</h1>
+        <p>Remplissez ce court formulaire. Le centre vous recontactera pour confirmer la classe et les horaires.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form id="form-preinscription" class="form" novalidate>
+
+          <div class="champ">
+            <label for="nom-eleve">Nom complet de l'élève</label>
+            <input type="text" id="nom-eleve" name="nom-eleve" placeholder="ex. SIMO JEAN"
+                   autocomplete="off" aria-describedby="err-nom-eleve">
+            <p class="erreur" id="err-nom-eleve" aria-live="polite"></p>
+          </div>
+
+          <div class="champ">
+            <label for="telephone">Téléphone de l'élève</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="ex. 683 162 330"
+                   inputmode="tel" autocomplete="tel" aria-describedby="err-telephone">
+            <p class="erreur" id="err-telephone" aria-live="polite"></p>
+          </div>
+
+          <div class="champ">
+            <label for="classe">Classe</label>
+            <select id="classe" name="classe" aria-describedby="err-classe">
+              <option value="">Choisir la classe</option>
+              <option value="3eme">3ème</option>
+              <option value="seconde-a4">Seconde A4</option>
+              <option value="seconde-c">Seconde C</option>
+              <option value="premiere-a4">Première A4</option>
+              <option value="premiere-c">Première C</option>
+              <option value="premiere-d">Première D</option>
+              <option value="terminale-a4">Terminale A4</option>
+              <option value="terminale-c">Terminale C</option>
+              <option value="terminale-d">Terminale D</option>
+            </select>
+            <p class="erreur" id="err-classe" aria-live="polite"></p>
+          </div>
+
+          <div class="champ">
+            <label for="etablissement">Établissement actuel</span></label>
+            <input type="text" id="etablissement" name="etablissement" autocomplete="off"
+                   aria-describedby="err-etablissement">
+            <p class="erreur" id="err-etablissement" aria-live="polite"></p>
+          </div>
+
+</form>
+
+          <div class="champ">
+            <label for="nom-parent">Nom du parent ou tuteur</label>
+            <input type="text" id="nom-parent" name="nom-parent" placeholder="ex. ATANGANA PIERRE"
+                   autocomplete="name" aria-describedby="err-nom-parent">
+            <p class="erreur" id="err-nom-parent" aria-live="polite"></p>
+          </div>
+
+          <div class="champ">
+            <label for="telephone">Téléphone du parent</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="ex. 677 123 456"
+                   inputmode="tel" autocomplete="tel" aria-describedby="err-telephone">
+            <p class="erreur" id="err-telephone" aria-live="polite"></p>
+          </div>
+
+          <div class="champ">
+            <label class="consentement" for="consentement">
+              <input type="checkbox" id="consentement" name="consentement" aria-describedby="err-consentement">
+              <span>J'accepte que PREMIA ACADEMY utilise ces informations pour traiter cette préinscription.</span>
+            </label>
+            <p class="erreur" id="err-consentement" aria-live="polite"></p>
+          </div>
+
+          <button class="btn btn-gold" type="submit">Envoyer ma préinscription</button>
+          <p class="note-form">WhatsApp s'ouvrira avec votre message prêt : il suffit d'appuyer sur « envoyer ».</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h3>Contact</h3>
+      <a href="https://wa.me/237683857126">WhatsApp : 683 857 126</a>
+      <a href="tel:+237659128601">Téléphone : 659 128 601</a>
+      <h3>Liens rapides</h3>
+      <a href="a-propos.html">À propos</a>
+      <a href="formations.html">Nos formations</a>
+      <a href="horaires.html">Nos horaires</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <p class="copyright">© 2026 PREMIA ACADEMY. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/237683857126" aria-label="Écrire sur WhatsApp">WA</a>
+</body>
+</html>

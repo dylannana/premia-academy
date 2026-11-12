@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galerie | PREMIA ACADEMY, la vie du centre à Douala</title>
+  <meta name="description" content="Découvrez en photos la vie à PREMIA ACADEMY (Makepe BM, Douala) : séances de cours, activités pédagogiques et événements.">
+  <meta name="theme-color" content="#00173D">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Galerie | PREMIA ACADEMY">
+  <meta property="og:description" content="La vie du centre en photos.">
+  <meta property="og:image" content="assets/img/logo/logo-complet.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="PREMIA ACADEMY, accueil">
+        <span class="brand-mono" aria-hidden="true">P</span>
+        <span class="brand-text">
+          <span class="brand-name">PREMIA</span>
+          <span class="brand-sub">ACADEMY</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-gold btn-sm" href="preinscription.html">Préinscrire</a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Ouvrir le menu">
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+    <nav class="main-nav" id="menu-principal" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="formations.html">Nos formations</a></li>
+        <li><a href="equipe.html">Notre équipe</a></li>
+        <li><a href="horaires.html">Nos horaires</a></li>
+        <li><a href="galerie.html" aria-current="page">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Galerie</h1>
+        <p>La vie à PREMIA ACADEMY : séances de cours, activités et événements.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-galerie">
+      <div class="container">
+        <p class="eyebrow">En images</p>
+        <h2 id="titre-galerie">Le centre en photos</h2>
+
+        <div class="galerie-grid">
+
+          <!-- ===== PHOTO DE TEST : à supprimer quand tu ajoutes les vraies photos ===== -->
+          <figure>
+            <button class="vignette" type="button"
+                    data-grand="assets/img/logo/logo-complet.png"
+                    data-legende="Logo de PREMIA ACADEMY">
+              <img src="assets/img/logo/logo-complet.png" alt="Logo de PREMIA ACADEMY"
+                   width="400" height="300" loading="lazy">
+            </button>
+            <figcaption>Logo de PREMIA ACADEMY</figcaption>
+          </figure>
+
+          <!-- ===== MODÈLE D'UNE VRAIE PHOTO (copie-colle ce bloc pour chaque photo) =====
+          <figure>
+            <button class="vignette" type="button"
+                    data-grand="assets/img/gallery/seance-maths.jpg"
+                    data-legende="Séance de cours de mathématiques">
+              <img src="assets/img/gallery/seance-maths.jpg" alt="Séance de cours de mathématiques"
+                   width="400" height="300" loading="lazy">
+            </button>
+            <figcaption>Séance de cours de mathématiques</figcaption>
+          </figure>
+          -->
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Rejoignez PREMIA ACADEMY</h2>
+        <p>Préinscrivez votre enfant dès maintenant.</p>
+        <a class="btn btn-gold" href="preinscription.html">Préinscrire mon enfant</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fenêtre d'agrandissement des photos -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo agrandie">
+    <div class="lightbox-inner">
+      <img id="lightbox-img" alt="">
+      <p id="lightbox-legende"></p>
+      <button class="lightbox-close" type="button" aria-label="Fermer la photo">&times;</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <h3>Contact</h3>
+      <a href="https://wa.me/237683857126">WhatsApp : 683 857 126</a>
+      <a href="tel:+237659128601">Téléphone : 659 128 601</a>
+      <h3>Liens rapides</h3>
+      <a href="a-propos.html">À propos</a>
+      <a href="formations.html">Nos formations</a>
+      <a href="horaires.html">Nos horaires</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <p class="copyright">© 2026 PREMIA ACADEMY. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/237683857126" aria-label="Écrire sur WhatsApp">WA</a>
+</body>
+</html>
