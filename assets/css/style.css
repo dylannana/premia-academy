@@ -478,3 +478,14 @@ img.avatar { display: block; object-fit: cover; }
 @media (min-width: 900px) {
   .galerie-grid { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* Bouton WhatsApp flottant : icône */
+.wa-float {
+  color: #fff;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+}
+.wa-float svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
